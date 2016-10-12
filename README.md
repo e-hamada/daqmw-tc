@@ -17,7 +17,7 @@ DAQMW-TC
 
 実習に使うボードは主催者側で用意します。
 
-パソコンにはVirtualBoxをインストールして、仮想Scientific Linux 6.5上で
+パソコンにはVirtualBoxをインストールして、仮想Scientific Linux 6.8上で
 実を行います。
 [セットアップ方法のページ](http://daqmw.kek.jp/seminar/2014/virtualbox/)
 を用意してありますのでコース出席前に準備しておいてください。
@@ -28,7 +28,7 @@ DAQMW-TC
 ここにあるファイルをダウンロードするにはターミナルを開いて次のコマンドを実行します。
 
     % cd
-    % git clone https://github.com/h-sendai/daqmw-tc.git
+    % git clone https://github.com/e-hamada/daqmw-tc.git
 
 パーセント記号(%)はコマンドラインのプロンプトで入力する必要は
 ありません。最初のcdコマンドはホームディレクトリに移動するために
