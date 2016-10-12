@@ -8,8 +8,16 @@
 ログの確認
 --------------------------------
 ターミナルを開いて
-	% daq-emulator
 
+    % daq-emulator
+
+サンプルコンポーネントのソースコードは /usr/share/daqmw/examples ディレクトリ
+以下に入っているのでそれをコピーする。
+
+    % mkdir ~/MyDaq
+    % cd ~/MyDaq
+    % cp -r /usr/share/daqmw/examples/SampleReader .
+    % cp -r /usr/share/daqmw/examples/SampleMonitor .
 
 
 
