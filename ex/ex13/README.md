@@ -7,11 +7,11 @@
 
 ログの表示
 --------------------------------
-ターミナルを開いて
+ターミナルを開いて、下記を実行する。
 
     % tail -f /tmp/daqmw/log.SampleReaderComp
 
-SampleReaderのログが表示される。また、tailコマンドに-fオプションを追加させているので、ログが
+すると、SampleReaderのログが表示される。tailコマンドに-fオプションを追加させているので、ログが
 更新されるとその分の表示も行われる。
 
 別のターミナルを開いて、ex11で行ったようにSampleReaderComp、SampleMonitorCompおよびこれらを
@@ -43,7 +43,7 @@ SampleReaderのログが表示される。また、tailコマンドに-fオプ�
     std::cerr << "*** SampleReader::configure" << std::endl;
 
 と記載されているが、この箇所がログを出力するための記述である。また、関数daq_start()はデータ収集が開始された直後に
-一度だけ実行される関数であり、この関数にも同様のログ出力の記述がされている。
+一度だけ実行される関数であり、この関数にも同様にログ出力の記述がされている。
 これらのように、
 
     std::cerr << "◯◯◯" << std::endl;
@@ -56,7 +56,7 @@ SampleReaderのログが表示される。また、tailコマンドに-fオプ�
 
 SampleReaderの編集
 --------------------------------
-関数daq_configure()や関数daq_start()と同様に、関数daq_run()にも初めに以下のような記述を追加してほしい。
+関数daq_run()の開始直後に以下のような記述を追加してほしい。
 
     std::cerr << "*** SampleReader::run" << std::endl;
 
