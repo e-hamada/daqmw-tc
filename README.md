@@ -75,5 +75,3 @@ DAQ-Middleware習得手段のひとつだと思っていれてあります。
 * RawDataMonitor
 * RawDataLogger
 * Dispatcher
-
-TEST
