@@ -56,7 +56,7 @@ word lengthとチャンネル数とデータ長から、何ウインドウ分の
 使う:
 
     % cd ~/daqmw-tc/sandbox
-    % cp -r ../ex/ex5 .
+    % cp -r ../ex/ex6 .
 
 デコード部分のメソッドが書いてないのでこれを埋めること。
 
