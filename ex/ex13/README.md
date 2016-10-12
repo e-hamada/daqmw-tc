@@ -5,28 +5,65 @@
 ここではSampleReaderのログを確認し、SampleReaderの状態遷移の確認を行う。
 
 
-ログの確認
+ログの表示
 --------------------------------
 ターミナルを開いて
 
-    % daq-emulator
+    % tail -f /tmp/daqmw/log.SampleReaderComp
 
-サンプルコンポーネントのソースコードは /usr/share/daqmw/examples ディレクトリ
-以下に入っているのでそれをコピーする。
+SampleReaderのログが表示される。また、tailコマンドに-fオプションを追加させているので、ログが
+更新されるとその分の表示も行われる。
 
-    % mkdir ~/MyDaq
+別のターミナルを開いて、ex11で行ったようにSampleReaderComp、SampleMonitorCompおよびこれらを
+統括するDaqOperatorを起動する。
+
     % cd ~/MyDaq
-    % cp -r /usr/share/daqmw/examples/SampleReader .
-    % cp -r /usr/share/daqmw/examples/SampleMonitor .
+    % run.py -cl sample.xml
 
 
+数値入力待ちになっているので0を押しエンターキーを押すとconfiugredになる。すると、別ターミナルで開いていた
+ログに下記のようなメッセージが追加される。
+
+    *** SampleReader::configure
+
+さらに、1を押すとラン番号を入力するよう、うながされるので適当に番号(1とか2とか)
+を入力する。ラン番号を入力するとデータ収集を開始する。
+すると、以下のようなメッセージがログに追加される。
+
+    *** SampleReader::start
+
+2を押してデータ収集システムを終了させ、3を押しunconfigured状態にしたあと control-cを押すとシステムが終了する。
+
+ログ出力方法
+--------------------------------
+次にプログラムのどの箇所でログ出力を定義しているのかを確認する。
+~/MyDaq/SampleReaderにあるSampleReader.cppの中を見ると関数daq_configure()がある。configured状態に遷移すると、
+この関数が一度だけ実行される。この関数の初めに
+
+    std::cerr << "*** SampleReader::configure" << std::endl;
+
+と記載されているが、この箇所がログを出力するための記述である。また、関数daq_start()はデータ収集が開始された直後に
+一度だけ実行される関数であり、この関数にも同様のログ出力の記述がされている。
+これらのように、
+
+    std::cerr << "◯◯◯" << std::endl;
+
+と記載することで、◯◯◯の部分がログファイルに出力される。
+
+ログはコンポーネントのプログラムを作る上で、役に立つことがよくある。例えば、何らかの理由でプログラムが
+止まってしまった場合、ログを利用することで止まってしまう場所を特定することができる。
 
 
 SampleReaderの編集
 --------------------------------
-SampleReaderを含む/usr/share/daqmw/example以下にある全てのコンポーネントソースファイルでは
-m_debug変数が定義されている。デフォルトではm_debug変数がfalseになっているが、この変数を
-trueにすることによって、デバッグメッセージをログに出力させることができる。
+関数daq_configure()や関数daq_start()と同様に、関数daq_run()にも初めに以下のような記述を追加してほしい。
 
+    std::cerr << "*** SampleReader::run" << std::endl;
 
+Makeしたあと、DAQ Middlewareを起動する。
 
+    % cd ~/MyDaq
+    % run.py -cl sample.xml
+
+データ収集を開始すると、*** SampleReader::runというメッセージがログに繰り返し表示されることが確認できる。
+これはデータ収集がされている間は繰り返し、関数daq_run()が実行されるからである。
