@@ -7,7 +7,7 @@ ex01からex10まででDAQ-Middlewareを使う上で必要になる事項(c++、
 実習で使うボードから送られてくるデータのフォーマット、
 デコード方法)を習得します。
 
-ex11からex14でDAQ-Middlewareを使ったデータ収集システムの構築を
+ex11からex15でDAQ-Middlewareを使ったデータ収集システムの構築を
 実習します。
 
 - [ex01](ex01/) 実習環境確認
@@ -22,5 +22,6 @@ ex11からex14でDAQ-Middlewareを使ったデータ収集システムの構築�
 - [ex10](ex10/) ncコマンドでデータを読みグラフを画面に表示する
 - [ex11](ex11/) DAQ-Middleware付属サンプルコンポーネントを動かしてみる
 - [ex12](ex12/) Webモードでシステムを動かす
-- [ex13](ex13/) ボードを読むシステム(DAQ-Middleware使用)を動かしてみる(Reader - Logger)
-- [ex14](ex14/) ボードを読んでモニターするシステムをDAQ-Middlewareで作る(Reader - Monitor)
+- [ex13](ex13/) ログの確認
+- [ex14](ex14/) ボードを読むシステム(DAQ-Middleware使用)を動かしてみる(Reader - Logger)
+- [ex15](ex15/) ボードを読んでモニターするシステムをDAQ-Middlewareで作る(Reader - Monitor)
