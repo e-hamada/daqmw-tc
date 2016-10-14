@@ -65,5 +65,9 @@ Makeしたあと、DAQ Middlewareを起動する。
     % cd ~/MyDaq
     % run.py -cl sample.xml
 
-データ収集を開始すると、*** SampleReader::runというメッセージがログに繰り返し表示されることが確認できる。
+データ収集を開始すると、
+
+    *** SampleReader::run
+
+というメッセージがログに繰り返し表示されることが確認できる。
 これはデータ収集がされている間は繰り返し関数daq_run()が実行されるからである。
