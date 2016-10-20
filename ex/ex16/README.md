@@ -75,7 +75,7 @@ ReaderとMonitorの時のコンフィグレーションファイルにsample.xml
     % wget http://research.kek.jp/people/ehamada/sample3.xml
 
 
-ReaderとMonitorの2つのコンポーネントの時の違いを確認して欲しい。なお、コンフィグレーションファイルの詳細はDAQ-Middleware 1.4.0開発マニュアル( http://daqmw.kek.jp/docs/DAQ-Middleware-1.4.0-DevManual.pdf )に掲載されている。
+ReaderとMonitorの2つのコンポーネントの時の違いを確認して欲しい。なお、コンフィグレーションファイルの詳細はDAQ-Middleware 1.4.0開発マニュアル( http://daqmw.kek.jp/docs/DAQ-Middleware-1.1.0-Tech.pdf )の22ページに掲載されている。
 
 
 SampleReaderはIPアドレス192.168.10.100から、
