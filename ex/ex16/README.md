@@ -6,7 +6,9 @@ ex11で~/MyDaq/にSampleReaderとSampleMonitorから構成される
 このシステムに２つのSampleReaderとMergerを追加し、以下のようなシステムを作成する。
 
 emulator --- SampleReader  ---\
+
 emulator --- SampleReader2 --- Merger --- SampleMonitor
+
 emulator --- SampleReader3 ---/
 
 
