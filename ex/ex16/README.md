@@ -75,21 +75,19 @@ ReaderとMonitorの時のコンフィグレーションファイルにsample.xml
     % wget http://research.kek.jp/people/ehamada/sample3.xml
 
 
-ReaderとMonitorの2つのコンポーネントの時の違いを確認して欲しい。なお、コンフィグレーションファイルの詳細はDAQ-Middleware 1.4.0開発マニュアル(http://daqmw.kek.jp/docs/DAQ-Middleware-1.4.0-DevManual.pdf)に掲載されている。
+ReaderとMonitorの2つのコンポーネントの時の違いを確認して欲しい。なお、コンフィグレーションファイルの詳細はDAQ-Middleware 1.4.0開発マニュアル( http://daqmw.kek.jp/docs/DAQ-Middleware-1.4.0-DevManual.pdf )に掲載されている。
 
 
-SampleReaderがIPアドレス192.168.10.100からデータを取ってきている。
-
-SampleReader2がIPアドレス192.168.10.101からデータを取ってきている。
-
-SampleReader3がIPアドレス192.168.10.102からデータを取ってきている。
-
-IPアドレスの設定もコンフィグレーションファイルで定義している。
+SampleReaderはIPアドレス192.168.10.100から、
+SampleReader2はIPアドレス192.168.10.101から、
+SampleReader3はIPアドレス192.168.10.102からデータを取得している。
+これらIPアドレスの設定はコンフィグレーションファイルで定義している。
 
 実行
 --------------------------------
 
 以下のコマンドを実行
+
     % run.py -cl sample3.xml
 
 あとは通常どおりに動かすことができる
