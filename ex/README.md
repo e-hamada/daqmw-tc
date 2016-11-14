@@ -25,3 +25,4 @@ ex11からex15でDAQ-Middlewareを使ったデータ収集システムの構築�
 - [ex13](ex13/) ログの確認
 - [ex14](ex14/) ボードを読むシステム(DAQ-Middleware使用)を動かしてみる(Reader - Logger)
 - [ex15](ex15/) ボードを読んでモニターするシステムをDAQ-Middlewareで作る(Reader - Monitor)
+- [ex16](ex16/) Mergerを利用して複数台のPCからデータを収集する
