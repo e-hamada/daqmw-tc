@@ -1,25 +1,25 @@
 DAQMW-TC
 ========
 
-[DAQ-Middlewareトレーニングコース時間割など](http://daqmw.kek.jp/seminar/2016/)
+[DAQ-Middlewareトレーニングコース時間割など](http://daqmw.kek.jp/seminar/2017/)
 
-2016年10月開催のDAQ-Middlewareトレーニングコース実習用ファイルです。
+2017年9月開催のDAQ-Middlewareトレーニングコース実習用ファイルです。
 トレーニングコース内で実習に入るまえに何をどういう手順で行うのかを説明します。
 
 ![実習システムの様子](http://daqmw.kek.jp/seminar/2014/spartan_and_mac-small.png)
 
 受講者のかたがたは以下のものを用意してください。
 
-- パソコン(Windows Vista/7/8あるいはMacOS X)
+- パソコン(Windows Vista/7/8/10あるいはMacOS X)
 - 有線LANで接続できるイーサネット(パソコンにLANポートが付いていない場合は
 上の写真のようにUSBイーサネットアダプタを用意のうえ参加してください)
 - LANケーブル
 
 実習に使うボードは主催者側で用意します。
 
-パソコンにはVirtualBoxをインストールして、仮想Scientific Linux 6.8上で
+パソコンにはVirtualBoxをインストールして、仮想Scientific Linux 6.9上で
 実を行います。
-[セットアップ方法のページ](http://daqmw.kek.jp/seminar/2014/virtualbox/)
+[セットアップ方法のページ](http://daqmw.kek.jp/seminar/2017/virtualbox/)
 を用意してありますのでコース出席前に準備しておいてください。
 
 ファイルの取得
