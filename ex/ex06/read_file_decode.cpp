@@ -82,13 +82,13 @@ int main(int argc, char *argv[])
         //cout << "trigger_count: " << trigger_count << endl;
         
         // Decode data
-        for (int ch = 0; ch < n_ch; ch ++) {
-            for (int w = 0; w < window_size; w++) {
+        for (int w = 0; w < window_size; w++) {
+            for (int ch = 0; ch < n_ch; ch ++) {
                 unsigned short data = r.get_data_at(ch, w);
                 cout << "trg: "     << trigger_count;
                 cout << " ch: "      << ch;
                 cout << " window: " << w;
-                cout << " data: "   << data;
+                cout << hex << " data: "   << data;
                 cout << endl;
             }
         }
