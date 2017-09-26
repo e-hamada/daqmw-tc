@@ -73,16 +73,6 @@ Makefileで
 
 - SampleMonitorではヒストグラムを書いていたのでTH1.hをインクルードし、
   TH1F *m_histとしてヒストグラムへのポインタを宣言していたが、RawDataMonitorでは書くものはグラフなのでTGraph.hをインクルードし、変数名、型もそれにあわせて変更する必要がある。
-- SampleMonitorでは上流からくるデータをいれるバッファとして
-
-        unsigned char m_recv_data[4096];
-を使っている。これはSampleMonitorの上流コンポーネントから送られてくるデータ長が4096バイトの固定長だからである。
-RawDataMonitorではフォーマット上はデータ長は固定長ではないので、
-大きめにバッファを確保する必要がある。たとえば
-
-        const static unsigned int DATA_BUF_SIZE = 1024*1024; // 1MB
-        unsigned char m_recv_data[DATA_BUF_SIZE];
-とする。
 
 ### RawDataMonitor.cppでの変更点
 
