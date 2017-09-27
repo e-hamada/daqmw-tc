@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     }
 
     filename = argv[1];
-    fp = fopen(filename, "r");
+    fp = fopen(filename, "rb");
     if (fp == NULL) {
         err(1, "fopen for %s", filename);
     }
