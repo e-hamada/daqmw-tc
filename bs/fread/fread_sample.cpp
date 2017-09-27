@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    FILE *fp = fopen(argv[1], "r");
+    FILE *fp = fopen(argv[1], "rb");
     if (fp == NULL) {
         err(EXIT_FAILURE, "fopen error");
     }
